@@ -1,5 +1,5 @@
-import { BlockPage } from "@/components/lander";
+import { HomepageNew } from '@/components/homepage-new'
 
-export default function Home() {
-  return <BlockPage />
+export default function Home () {
+  return <HomepageNew />
 }
