@@ -1,7 +1,8 @@
+import LandingPage from "@/components/landing-page"
 export default function Home() {
   return (
     <div>
-      <h1>Welcome to Krishali Wellness</h1>
+      <LandingPage />
       {/* Hero, About, and Services sections will go here */}
     </div>
   )
