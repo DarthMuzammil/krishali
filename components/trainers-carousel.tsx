@@ -7,19 +7,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import { keyframes } from '@emotion/react'
-
-const pulseAnimation = keyframes`
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-`
 
 const trainers = [
   {
@@ -80,7 +67,7 @@ export default function TrainersCarousel() {
   const scrollNext = () => emblaApi && emblaApi.scrollNext()
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+    <section id="trainers" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Our Trainers</h2>
         <div className="relative">
@@ -100,7 +87,7 @@ export default function TrainersCarousel() {
                             alt={`Trainer ${trainer.name}`}
                             layout="fill"
                             objectFit="cover"
-                            className="rounded-full border-2 border-black shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 animate-[${pulseAnimation} 2s infinite]"
+                            className="rounded-full border-2 border-black shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
                           />
                         </div>
                         <div>
