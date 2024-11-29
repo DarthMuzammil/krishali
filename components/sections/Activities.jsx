@@ -26,8 +26,8 @@ const activities = [
   {
     id: 3,
     activityName: "Fitness",
-    buildingName: "Landmark Tower",
-    timing: "Mon, Tue & Wed 6:00pm to 9:00pm",
+    buildingName: "GOLDEN FALCON TOWER",
+    timing: "Mon, Tue ,Wed  & Thu 5:30pm to 6:30pm",
     prices: [
       { classes: 1, price: 60 },
       { classes: 2, price: 250 },
