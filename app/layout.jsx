@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -122,6 +123,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
         <Footer />
       </body>
     </html>
