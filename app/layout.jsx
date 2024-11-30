@@ -39,6 +39,15 @@ export default function RootLayout({ children }) {
         <meta name="icons" content={metadata.icons} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content={metadata.robots} />
+        <meta name="geo.region" content="AE" />
+        <meta name="geo.placename" content="Abu Dhabi, United Arab Emirates" />
+        <meta property="og:locale" content="en_AE" />
+        <meta property="og:title" content="Krishali Wellness - Abu Dhabi" />
+        <meta
+          property="og:description"
+          content={metadata.description}
+        />
+        <meta property="og:url" content="https://krishaligroup.com" />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
