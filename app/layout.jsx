@@ -124,6 +124,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
+        <GoogleAnalytics gtmId="GTM-16802529719" />
         <Footer />
       </body>
     </html>
