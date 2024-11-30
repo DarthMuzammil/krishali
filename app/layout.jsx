@@ -1,4 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/react"
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
         {children}
         <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
         <GoogleAnalytics gtmId="GA-16802529719" />
+        <Analytics/>
         <Footer />
       </body>
     </html>
