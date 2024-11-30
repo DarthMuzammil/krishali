@@ -16,8 +16,8 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Krishali Wellness - Your Wellness Destination",
-  description: "Discover luxurious wellness services at Krishali Group, located at prime landmarks in Abu Dhabi, Like Corniche, Hamdan, Du Building, Landmark Tower, Golden Falcon Tower",
-  keywords: ["Krishali Wellness", "Abu Dhabi wellness", "Corniche spa", "luxury pools", "relaxation", "Krishali Zumba", "Swimming Classes Hamdan", "Swimming Corniche", "Zumba Corniche", "Landmark Building Pool", "Hamdan Pool"],
+  description: "Discover luxurious wellness services at Krishali Group, located at prime landmarks in Abu Dhabi, Like Corniche, Hamdan, Du Building, Landmark Tower, Golden Falcon Tower, Al bustan complex",
+  keywords:  "Krishali Wellness, Abu Dhabi wellness, Corniche spa, Al Bustan Complex gym services, Al Bustan Complex, luxury pools, relaxation, Krishali Zumba, Swimming Classes Hamdan, Swimming Corniche, Zumba Corniche, Landmark Building Pool, Fitness classes near Landmark Tower, Hamdan Pool",
   robots: {
     index: true,
     follow: true,
