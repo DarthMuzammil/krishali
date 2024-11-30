@@ -3,9 +3,6 @@
 import { useState } from "react";
 import TrainersCarousel from "@/components/trainers-carousel";
 import Hero from "./sections/Hero";
-import AyurvedicMassage from "./sections/AyurvedicMassage";
-import Gyms from "./sections/Gyms";
-import Contact from "./sections/Contact";
 import Activities from "./sections/Activities";
 
 export default function LandingPage() {
