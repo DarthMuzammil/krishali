@@ -1,75 +1,76 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-import Image from 'next/image'
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const trainers = [
   {
     name: "Lumar",
     activity: "Swimming",
     location: "Landmark, Abu Dhabi",
-    timing: "Mon to Fri: 6 AM - 2 PM\nSat & Sun: 7 PM - 9 PM"
-  },
-  {
-    name: "Arafat",
-    activity: "Swimming",
-    location: "Landmark, Abu Dhabi",
-    timing: "Sat & Sun: 3 PM - 8 PM"
+    timing: "Mon to Fri: 6 AM - 2 PM\nSat & Sun: 7 PM - 9 PM",
+    trainerImage: "/trainers/Lumar.jpeg",
   },
   {
     name: "Mehtab",
     activity: "Fitness",
     location: "Golden Falcon Tower, Abu Dhabi",
-    timing: "Mon, Tue, Wed: 6 PM - 9 PM"
-  },
-  {
-    name: "Rovin",
-    activity: "Fitness",
-    location: "Landmark Tower, Abu Dhabi",
-    timing: "Mon to Sun: 9 AM - 9 PM"
+    timing: "Mon, Tue, Wed: 6 PM - 9 PM",
+    trainerImage: "/trainers/Mehtab.jpeg",
   },
   {
     name: "Evelyn",
     activity: "Zumba",
     location: "Landmark Tower, Abu Dhabi",
-    timing: "Sun, Mon, Tue, Thu: 4:30 PM - 5:30 PM"
-  },
-  {
-    name: "Deepthi",
-    activity: "Swimming",
-    location: "Golden Falcon Tower, Abu Dhabi",
-    timing: "Mon to Thu: 5:30 PM - 6:30 PM"
+    timing: "Sun, Mon, Tue, Thu: 4:30 PM - 5:30 PM",
+    trainerImage: "/trainers/Evelyn.jpeg",
   },
   {
     name: "Mahmoud Allam",
     activity: "Swimming",
     location: "Sama Tower, Dubai",
-    timing: "Mon & Wed: 1 PM - 3 PM\nTue & Thu: 9 AM - 3 PM\nSat & Sun: 7 PM - 10 PM"
-  }
-]
+    timing:
+      "Mon & Wed: 1 PM - 3 PM\nTue & Thu: 9 AM - 3 PM\nSat & Sun: 7 PM - 10 PM",
+    trainerImage: "/trainers/Allam.jpeg",
+  },
+];
 
 export default function TrainersCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: 'start',
-    slidesToScroll: 1,
-    breakpoints: {
-      '(min-width: 768px)': { slidesToScroll: 2 }
-    }
-  }, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      slidesToScroll: 1,
+      breakpoints: {
+        "(min-width: 768px)": { slidesToScroll: 2 },
+      },
+    },
+    [Autoplay()]
+  );
 
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev()
-  const scrollNext = () => emblaApi && emblaApi.scrollNext()
+  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+  const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <section id="trainers" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+    <section
+      id="trainers"
+      className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 flex flex-row justify-center dark:bg-gray-800"
+    >
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">Our Trainers</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+          Our Trainers
+        </h2>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
@@ -83,7 +84,7 @@ export default function TrainersCarousel() {
                       <div className="flex items-center space-x-4">
                         <div className="relative w-32 h-32">
                           <Image
-                            src={`/placeholder.svg?height=200&width=200`}
+                            src={trainer.trainerImage}
                             alt={`Trainer ${trainer.name}`}
                             layout="fill"
                             objectFit="cover"
@@ -101,7 +102,9 @@ export default function TrainersCarousel() {
                         <strong>Location:</strong> {trainer.location}
                       </p>
                       <p className="text-sm text-gray-500 dark:text-gray-400 whitespace-pre-line">
-                        <strong>Timing:</strong><br />{trainer.timing}
+                        <strong>Timing:</strong>
+                        <br />
+                        {trainer.timing}
                       </p>
                     </CardContent>
                   </Card>
@@ -130,5 +133,5 @@ export default function TrainersCarousel() {
         </div>
       </div>
     </section>
-  )
+  );
 }
