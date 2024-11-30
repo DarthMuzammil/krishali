@@ -72,7 +72,7 @@ export default function TrainersCarousel() {
                           <Image
                             src={trainer.trainerImage}
                             alt={`Trainer ${trainer.name}`}
-                            layout="fill"
+                        
                             className="rounded-full border-2 border-black shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
                           />
                         </div>

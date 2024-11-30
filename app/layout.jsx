@@ -29,10 +29,78 @@ export const metadata = {
     icon: "./favicon.ico",
   },
 };
+const jsonld = 
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Krishali Wellness - Landmark Tower",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corniche Street, Landmark Tower",
+        "addressLocality": "Abu Dhabi",
+        "addressRegion": "Abu Dhabi",
+        "postalCode": "00000",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.4851,
+        "longitude": 54.3508
+      },
+      "telephone": "+971 50 371 4039",
+      "openingHours": "Mo-Su 08:00-20:00"
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Krishali Wellness - Golden Falcon Tower",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Golden Falcon Tower, Hamdan Street",
+        "addressLocality": "Abu Dhabi",
+        "addressRegion": "Abu Dhabi",
+        "postalCode": "00000",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.470902,
+        "longitude": 54.372226
+      },
+      "telephone": "+971 50 371 4039",
+      "openingHours": "Mo-Su 08:00-20:00"
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Krishali Wellness - Al Bustan Complex",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Bustan Complex",
+        "addressLocality": "Abu Dhabi",
+        "addressRegion": "Abu Dhabi",
+        "postalCode": "00000",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.463902,
+        "longitude": 54.387226
+      },
+      "telephone": "+971 50 371 4039",
+      "openingHours": "Mo-Su 08:00-20:00"
+    }
+  ]
+}
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
+      />
       <Head>
         <meta name="keywords" content={metadata.keywords} />
         <meta name="description" content={metadata.description} />
