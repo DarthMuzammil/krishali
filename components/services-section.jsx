@@ -66,10 +66,10 @@ export default function ServicesSection() {
                     </h3>
                   </div>
                   
-                  <div className="p-6 bg-white">
-                    <div className="flex items-center mb-4">
+                <div className="p-6 bg-white">
+          <div className="flex items-center mb-4">
                       <span className="text-sky-600 font-semibold">{service.location}</span>
-                    </div>
+                    </div> 
                     
                     <div className="space-y-4">
                       <div>

@@ -12,7 +12,17 @@ function Activities({activities}) {
             console.log(activity)
 
             return(
-                <PricingCard key={index} name={activity.name} pricing={activity.pricing} schedule={activity.timing} caption={activity.caption} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {activities.map((activity, index) => (
+                  <PricingCard
+                    key={index}
+                    name={activity.name}
+                    pricing={activity.pricing}
+                    schedule={activity.timing}
+                    caption={activity.caption}
+                  />
+                ))}
+              </div>
             )
           
         })
@@ -70,7 +80,7 @@ export default function LocationPage() {
         </CardContent>
       </Card>
       </div>
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex base:flex-col xs:flex-c sm:flex-col md:flex-col lg:flex-col justify-center items-center">
       <Activities activities={location.activities}/>
       </div>
 
