@@ -70,33 +70,10 @@ export default function LocationPage() {
         </CardContent>
       </Card>
       </div>
+      <div className="flex flex-row justify-center items-center">
       <Activities activities={location.activities}/>
-      {/* <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {location.activities.map((activity, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <CardTitle>{activity.name}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <h3 className="font-semibold mb-2">Pricing:</h3>
-              <ul className="list-disc list-inside mb-4">
-                {activity.pricing.map((price, idx) => (
-                  <li key={idx}>{price.classes} class{price.classes > 1 ? "es" : ""}: {price.price} AED</li>
-                ))}
-              </ul>
-              <h3 className="font-semibold mb-2">Timing:</h3>
-              <ul className="space-y-2">
-                {activity.timing.map((time, idx) => (
-                  <li key={idx}>
-                    <Badge variant="outline" className="mr-2">{time.days}</Badge>
-                    {time.time}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        ))}
-      </div> */}
+      </div>
+
     </div>)
   );
 }

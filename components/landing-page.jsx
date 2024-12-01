@@ -4,6 +4,7 @@ import { useState } from "react";
 import TrainersCarousel from "@/components/trainers-carousel";
 import Hero from "./sections/Hero";
 import Activities from "./sections/Activities";
+import ServicesPage from "@/components/services-section";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,9 @@ export default function LandingPage() {
   return (
     <main className="flex-1  flex flex-col justify-center items-center">
       <Hero scrollToSection={scrollToSection} />
-      <Activities />
-      <TrainersCarousel />
+      <ServicesPage />
+      {/* <Activities />
+      <TrainersCarousel /> */}
     </main>
   );
 }
