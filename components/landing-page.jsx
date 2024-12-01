@@ -21,8 +21,6 @@ export default function LandingPage() {
     <main className="flex-1  flex flex-col justify-center items-center">
       <Hero scrollToSection={scrollToSection} />
       <ServicesPage />
-      {/* <Activities />
-      <TrainersCarousel /> */}
     </main>
   );
 }
