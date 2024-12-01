@@ -99,10 +99,7 @@ const jsonld =
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
-      />
+
       <Head>
       <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
       <GoogleAnalytics gaId="GA-16802529719" />
