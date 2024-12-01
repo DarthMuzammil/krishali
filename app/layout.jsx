@@ -104,6 +104,8 @@ export default function RootLayout({ children }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
       />
       <Head>
+      <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
+      <GoogleAnalytics gaId="GA-16802529719" />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="description" content={metadata.description} />
         <meta name="icons" content={metadata.icons} />
@@ -124,8 +126,6 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
-        <GoogleAnalytics gtmId="GTM-RH54034QRQ" />
-        <GoogleAnalytics gtmId="GA-16802529719" />
         <Analytics/>
         <Footer />
       </body>
