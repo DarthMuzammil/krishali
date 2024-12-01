@@ -74,7 +74,7 @@ export default function LocationPage() {
             height={200}
             className="rounded-full" />
           <div>
-            <h3 className="text-xl font-semibold mb-2">{location.trainer.name}</h3>
+            <h2 className="text-xl font-semibold mb-2">{location.trainer.name}</h2>
             <p>{location.trainer.information}</p>
           </div>
         </CardContent>

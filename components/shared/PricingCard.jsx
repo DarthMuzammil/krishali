@@ -37,7 +37,7 @@ export default function PricingCard({
 
         <CardContent className="space-y-6">
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Pricing:</h3>
+            <h2 className="font-semibold text-lg">Pricing:</h2>
             <motion.ul
               className="space-y-3"
               animate={{ x: isHovered ? 10 : 0 }}
@@ -56,9 +56,9 @@ export default function PricingCard({
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg flex items-center gap-2">
+            <h2 className="font-semibold text-lg flex items-center gap-2">
               <Calendar className="w-4 h-4" /> Schedule:
-            </h3>
+            </h2>
             <ul className="space-y-3 text-sm">
               {schedule.map((item, index) => {
                 return (
