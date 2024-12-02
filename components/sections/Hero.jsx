@@ -9,7 +9,7 @@ export default function Hero({ scrollToSection }) {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const images = [
-    "/1.jpg",
+    "/2.jpg",
     "/2.jpg",
     "/3.jpg",
   ]
@@ -31,7 +31,7 @@ export default function Hero({ scrollToSection }) {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image src={src} alt={`Slide ${index + 1}`} fill style={{ objectFit: "cover" }} />
+          <Image src={src} alt={`Slide ${index + 1}`} width={1200} height={100} />
         </div>
       ))}
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

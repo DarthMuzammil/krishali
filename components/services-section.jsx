@@ -57,8 +57,9 @@ export default function ServicesSection() {
                     <Image
                       src={service.image}
                       alt={service.name}
-                      fill
-                      className="object-cover transform hover:scale-110 transition-transform duration-700" />
+                      width={500}
+                      height={500}
+                      className="transform hover:scale-110 transition-transform duration-700" />
                     <div
                       className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <h2 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
