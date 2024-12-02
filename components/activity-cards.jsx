@@ -1,86 +1,71 @@
-"'use client'"
+"use client"
 
-import { useState } from "'react'"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "'@/components/ui/card'"
-import { RadioGroup, RadioGroupItem } from "'@/components/ui/radio-group'"
-import { Label } from "'@/components/ui/label'"
-import { Button } from "'@/components/ui/button'"
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import ContactButton from "./shared/ContactButton"
 
-const activities = [
-  {
-    name: "'Swimming'",
-    description: "'Enjoy our Olympic-sized pool with expert instruction'",
-  },
-  {
-    name: "'Zumba'",
-    description: "'High-energy dance workout for all fitness levels'",
-  },
-]
-
-const schedules = [
-  "'Mon - Wed  2:00pm 3:00pm'",
-  "'Thu - Sat  4:00pm 5:00pm'",
-]
-
-const sessionOptions = [
-  { sessions: 1, price: 20 },
-  { sessions: 2, price: 30 },
-]
 
 export default function ActivityCards() {
-  const [selectedSchedules, setSelectedSchedules] = useState([])
-  const [selectedSessions, setSelectedSessions] = useState({})
-
-  const handleScheduleSelect = (activity, schedule) => {
-    setSelectedSchedules(prev => ({
-      ...prev,
-      [activity]: schedule
-    }))
-  }
-
-  const handleSessionSelect = (activity, sessions) => {
-    setSelectedSessions(prev => ({
-      ...prev,
-      [activity]: sessions
-    }))
-  }
-
+  const activities = [
+    {
+      name: "Swimming",
+      pricing: [
+        { classes: "1 Class", price: 20 },
+        { classes: "2 Classes", price: 30 },
+      ],
+      timing: [
+        { days: "Mon - Wed", time: "2:00pm - 3:00pm" },
+        { days: "Thu - Sat", time: "4:00pm - 5:00pm" },
+      ],
+      caption: "Lorem ipsum dolor sit amet",
+    },
+    {
+      name: "Zumba",
+      pricing: [
+        { classes: "1 Class", price: 20 },
+        { classes: "2 Classes", price: 30 },
+      ],
+      timing: [
+        { days: "Tue - Thu", time: "6:00pm - 7:00pm" },
+        { days: "Sat", time: "10:00am - 11:00am" },
+      ],
+      caption: "Book Now! Only 10% Seats left",
+    },
+  ]
   return (
     (<div>
       <h2 className="text-2xl font-semibold mb-4">Choose Your Activities</h2>
       <div className="grid md:grid-cols-2 gap-6">
-        {activities.map((activity, index) => (
-          <Card key={index} className="transition-shadow hover:shadow-lg">
+        {activities?.map((activity, index) => (
+          <Card key={activity.name + activity.caption} className="transition-shadow hover:shadow-lg">
             <CardHeader>
               <CardTitle>{activity.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-4">{activity.description}</p>
+              <p className="text-gray-600 mb-4">{activity.caption}</p>
               <div className="mb-4">
                 <h2 className="font-semibold mb-2">Schedule</h2>
                 <RadioGroup
-                  value={selectedSchedules[activity.name]}
-                  onValueChange={(value) => handleScheduleSelect(activity.name, value)}>
-                  {schedules.map((schedule) => (
-                    <div key={schedule} className="flex items-center space-x-2">
-                      <RadioGroupItem value={schedule} id={`${activity.name}-${schedule}`} />
-                      <Label htmlFor={`${activity.name}-${schedule}`}>{schedule}</Label>
+
+                  >
+                  {activity?.timing?.map((schedule) => (
+                    <div key={activity.name + schedule.time} className="flex items-center space-x-2">
+                      <RadioGroupItem value={schedule.time} id={`${activity.name}-${schedule}`} />
+                      <Label htmlFor={`${activity.name}-${schedule.days}`}>{schedule.time}</Label>
                     </div>
                   ))}
                 </RadioGroup>
               </div>
               <div>
                 <h2 className="font-semibold mb-2">Number of Sessions</h2>
-                <RadioGroup
-                  value={selectedSessions[activity.name]?.toString()}
-                  onValueChange={(value) => handleSessionSelect(activity.name, parseInt(value))}>
-                  {sessionOptions.map((option) => (
-                    <div key={option.sessions} className="flex items-center space-x-2">
+                <RadioGroup>
+                  {activity.pricing.map((option) => (
+                    <div key={activity.name + option.price} className="flex items-center space-x-2">
                       <RadioGroupItem
-                        value={option.sessions.toString()}
-                        id={`${activity.name}-session-${option.sessions}`} />
-                      <Label htmlFor={`${activity.name}-session-${option.sessions}`}>
-                        {option.sessions} session{option.sessions > 1 ? "'s'" : "''"} (AED {option.price})
+                        id={`${activity.name}-session-${option.price}`} />
+                      <Label htmlFor={`${activity.name}-session-${option.classes}`}>
+                        {option.classes} (AED {option.price})
                       </Label>
                     </div>
                   ))}
@@ -88,11 +73,8 @@ export default function ActivityCards() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button
-                className="w-full"
-                disabled={!selectedSchedules[activity.name] || !selectedSessions[activity.name]}>
-                Book Now
-              </Button>
+              <ContactButton />
+          
             </CardFooter>
           </Card>
         ))}

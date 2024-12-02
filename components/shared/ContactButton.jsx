@@ -9,7 +9,7 @@ const ContactButton = () => {
     };
 
     return (
-        <Button onClick={handleContactClick}>
+        <Button className="w-full" onClick={handleContactClick}>
             Contact
         </Button>
     );

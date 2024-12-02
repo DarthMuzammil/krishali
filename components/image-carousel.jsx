@@ -1,17 +1,17 @@
-"'use client'"
+"use client"
 
-import { useState } from "'react'"
-import { ChevronLeft, ChevronRight } from "'lucide-react'"
-import { Button } from "'@/components/ui/button'"
-import { Card, CardContent } from "'@/components/ui/card'"
+import { useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const images = [
-  "'/placeholder.svg?height=400&width=600'",
-  "'/placeholder.svg?height=400&width=600'",
-  "'/placeholder.svg?height=400&width=600'",
+  "/placeholder.svg?height=400&width=600",
+  "/placeholder.svg?height=400&width=600",
+  "/placeholder.svg?height=400&width=600",
 ]
 
-const amenities = ["'State-of-the-art Equipment'", "'Swimming Pool'", "'Sauna'", "'Group Fitness Classes'"]
+const amenities = ["State-of-the-art Equipment", "Swimming Pool", "Sauna", "Group Fitness Classes"]
 
 export default function ImageCarousel() {
   const [currentImage, setCurrentImage] = useState(0)
