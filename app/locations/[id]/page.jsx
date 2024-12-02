@@ -44,7 +44,6 @@ export default function LocationPage() {
         }
         const data = await res.json();
         setLocation(data);
-        alert(JSON.stringify(data))
       } catch (error) {
         console.error(error);
       }
