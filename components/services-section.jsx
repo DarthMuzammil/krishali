@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { locationsLandingPage } from "@/lib/locations";
+import { locationsLandingPage } from "@/lib/constants/locations";
 
 const services = locationsLandingPage
 

@@ -1,4 +1,4 @@
-import { locations, locationsLandingPage } from "@/lib/locations";
+import { locations, locationsLandingPage } from "@/lib/constants/locations";
 
 export default function sitemap() {
   const staticPages = [

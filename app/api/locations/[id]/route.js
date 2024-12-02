@@ -1,4 +1,4 @@
-import { locations } from "@/lib/locations";
+import { locations } from "@/lib/constants/locations";
 
 export async function GET(req, { params }) {
   const { id } = params; // Extract 'id' from the URL

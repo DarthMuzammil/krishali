@@ -1,6 +1,6 @@
-import { locations_metadata } from "@/lib/locations";
+import { locations } from "@/lib/constants/locations";
 export async function generateMetadata({ params }) {
-  const metadata = locations_metadata[params?.id] ? locations_metadata[params?.id] :  {};
+  const metadata = locations[params?.id] ? locations[params?.id].metadata :  {};
   return {
     title: metadata.title,
     description: metadata.description,

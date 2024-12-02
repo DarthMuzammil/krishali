@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import TrainersCarousel from "@/components/trainers-carousel";
 import Hero from "./sections/Hero";
-import Activities from "./sections/Activities";
 import ServicesPage from "@/components/services-section";
 
 export default function LandingPage() {
