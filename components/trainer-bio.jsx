@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TrainerBio({ name, title, description, image }) {
+  console.log("sss", name, title, description, image)
   return name && title && description && image ? (
     <Card className="mb-12">
       <CardContent className="p-6">
@@ -24,6 +25,6 @@ export default function TrainerBio({ name, title, description, image }) {
       </CardContent>
     </Card>
   ) : (
-    <div>loading....</div>
+    <div>loadssing....</div>
   );
 }

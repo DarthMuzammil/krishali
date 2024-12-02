@@ -106,7 +106,6 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metadata.keywords} />
         <meta name="description" content={metadata.description} />
         <meta name="icons" content={metadata.icons} />
-        <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content={metadata.robots} />
         <meta name="geo.region" content="AE" />
         <meta name="geo.placename" content="Abu Dhabi, United Arab Emirates" />
