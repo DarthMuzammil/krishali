@@ -12,7 +12,7 @@ export default function sitemap() {
 
   // Generate entries for landing pages
   const landingPages = locationsLandingPage.map((location) => ({
-    url: `https://krishaligroup.com/location/${location.name}`,
+    url: `https://krishaligroup.com/` + `/locations/${location.name.toLowerCase().replace(/\s+/g, "-")}`,
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 0.8,
@@ -20,7 +20,7 @@ export default function sitemap() {
 
   // Generate entries for location-specific pages
   const locationPages = Object.keys(locations).map((id) => ({
-    url: `https://krishaligroup.com/location/${id}`,
+    url: `https://krishaligroup.com` + `/locations/${id.toLowerCase().replace(/\s+/g, "-")}`,
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 0.7,
