@@ -17,7 +17,6 @@ export default function PricingCard({
   caption,
 }) {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(name, description, pricing, schedule, caption, "aihswihi");
 
   return (
     <div className="flex items-center justify-center min-h-[400px] bg-gradient-to-br from-purple-50 to-pink-50 p-6">
