@@ -30,11 +30,12 @@ function BottomContainer({ children }) {
 
 function MainContainer({ children }) {
   return (
-    <div className="bg-gray-200 w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:shadow-[0_20px_60px_rgba(8,_112,_184,_0.4)] transition-all duration-300">
+    <div className="bg-gray-200 w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(135,_206,_235,_0.3)] hover:shadow-[0_20px_60px_rgba(135,_206,_235,_0.4)] transition-all duration-300">
       {children}
     </div>
   );
 }
+
 
 export default function AnimatedCard({ locations, orientation = "grid", className="" }) {
   return orientation === "grid" ? (
