@@ -4,6 +4,7 @@ import MotionHStack from "@/components/custom/MotionHStack";
 import MotionWithLink from "@/components/custom/MotionWithLink";
 import DisplayLocation from "@/components/custom/DisplayLoction";
 import DisplayActivities from "./DisplayActivities";
+import MotionGrid from "./MotionGrid";
 
 function DisplayImage({ service }) {
   return (
@@ -35,8 +36,22 @@ function MainContainer({ children }) {
   );
 }
 
-export default function AnimatedCard({ locations }) {
-  return (
+export default function AnimatedCard({ locations, orientation = "grid", className="" }) {
+  return orientation === "grid" ? (
+    <MotionGrid className={className}>
+      {locations.map((service, index) => (
+        <MotionWithLink key={index} service={service} index={index}>
+          <MainContainer>
+            <DisplayImage service={service} />
+            <BottomContainer>
+              <DisplayLocation location={service.location} />
+              <DisplayActivities activities={service.activities} />
+            </BottomContainer>
+          </MainContainer>
+        </MotionWithLink>
+      ))}
+    </MotionGrid>
+  ) : (
     <MotionHStack>
       {locations.map((service, index) => (
         <MotionWithLink key={index} service={service} index={index}>
