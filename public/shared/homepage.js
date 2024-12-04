@@ -12,7 +12,7 @@ export const slideChangeTime = 5000;
 
 export const heroTitle = "Krishali Wellness";
 
-export const heroDescription = "Welcomet to Krishali Wellness";
+export const heroDescription = "Welcome to Krishali Wellness";
 
 export const content = [
   {

@@ -5,12 +5,16 @@ export default function ServicesSection({ locations }) {
   return (
     <section
       id="Locations"
-      className="py-16  w-full bg-gradient-to-b from-sky-50 to-white"
+      className="sm:my-12 sm:bg-black"
     >
-      <div className="container mx-auto px-4">
-        <AnimatedHeading className=" mb-12" title="Our Premium Projects" />
-        <AnimatedCard locations={locations} />
-      </div>
+      <AnimatedHeading
+        className="mb-8 md:mb-12 text-center"
+        title="Our Premium Projects"
+      />
+      <AnimatedCard
+        locations={locations}
+        className="md:grid-cols-2 md:grid md:gap-28 sm:grid sm:pl-28 sm:mb-10 sm:grid-cols-1"
+      />
     </section>
   );
 }

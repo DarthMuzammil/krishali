@@ -17,7 +17,7 @@ export default function ImageCarousel({images, amenities, address}) {
         <img
           src={images[currentImage]}
           alt={`Gym image ${currentImage + 1}`}
-          className="w-full h-[400px] object-cover rounded-lg" />
+          className="w-full sm:h-[400px] md:h-[900px] object-cover rounded-lg" />
         <Button
           variant="outline"
           size="icon"

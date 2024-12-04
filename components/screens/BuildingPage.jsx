@@ -32,19 +32,19 @@ export default function BuildingPage({
      <AnimatedHeading className="mt-12 mb-12" title={displayName} />  
      </Link> 
       <ImageCarousel address={address} images={images} amenities={amenities} />
-      <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  {activities.map((activity, index) => (
+    <PricingCard
+      key={index}
+      name={activity.name}
+      timing={activity.timing}
+      pricing={activity.pricing}
+      trainers={activity.trainer}
+      locationsTrainers={locationsTrainers}
+    />
+  ))}
+</div>
 
-        {activities.map((activity, index) => (
-          <PricingCard
-            key={index}
-            name={activity.name}
-            timing={activity.timing}
-            pricing={activity.pricing}
-            trainers={activity.trainer}
-            locationsTrainers={locationsTrainers}
-          />
-        ))}
-      </div>
     </div>
   );
 }
