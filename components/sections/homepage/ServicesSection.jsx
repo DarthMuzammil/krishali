@@ -5,7 +5,7 @@ export default function ServicesSection({ locations }) {
   return (
     <section
       id="Locations"
-      className="sm:my-12 sm:bg-black"
+      className="sm:my-12"
     >
       <AnimatedHeading
         className="mb-8 md:mb-12 text-center"
