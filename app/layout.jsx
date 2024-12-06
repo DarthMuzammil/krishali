@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from "@vercel/analytics/react"
 import localFont from "next/font/local";
 import "./globals.css";
@@ -27,6 +28,8 @@ export default function RootLayout({ children }) {
         <Analytics/>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-RH54034QRQ" />
+      <GoogleAnalytics gtmId="GT-WBZWHK34" />
     </html>
   );
 }
