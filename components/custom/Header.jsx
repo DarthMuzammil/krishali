@@ -16,7 +16,7 @@ function Navigation({ menuItems, scrollToSection }) {
               size="sm"
               variant="ghost"
               onClick={() => scrollToSection(item)}
-              className="text-black text-lg"
+              className="text-white text-sm md:text-md lg:text-lg"
             >
               {item}
             </Button>
@@ -38,21 +38,21 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 lg:px-6 h-24 bg-gray-200 flex items-center justify-between">
+    <header className="px-4 lg:px-6 h-24 bg-[#032022] flex items-center justify-between">
       <Link href={"/"}>
         <Image
-          src="/krishalilogo.svg"
+          src="/krishalilogo.png"
           alt="Krishali Wellness Logo"
-          width={200}
+          width={150}
           priority={1}
-          height={200}
+          height={150}
           className="object-contain"
         />
       </Link>
       <HStack className="w-full justify-center items-center">
         <h1 className=" sm:text-lg md:text-2xl font-semibold text-gray-900 tracking-wide">
-          <span className="border-b-2 border-gray-800 pb-1">KRISHALI</span>{" "}
-          WELLNESS
+          <span className="border-b-2 text-white border-gray-200 pb-1">KRISHALI</span>
+          <span className="border-b-2 text-white border-gray-200 pb-1"> WELLNESS</span>
         </h1>
       </HStack>
       <Navigation menuItems={menuItems} scrollToSection={scrollToSection} />
