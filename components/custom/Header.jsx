@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 lg:px-6 h-24 bg-[#032022] flex items-center justify-between">
+    <header className="px-4 lg:px-6 h-24 bg-[#032022] flex items-center overflow-hidden justify-between">
       <Link href={"/"}>
         <Image
           src="/krishalilogo.png"
